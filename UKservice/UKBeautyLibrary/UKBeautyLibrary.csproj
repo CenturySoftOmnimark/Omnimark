@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CC47A3C-0F42-4E18-ACC5-4A355927BB96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UKBeautyLibrary</RootNamespace>
+    <AssemblyName>UKBeautyLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="com.ddmresources.EnumMetadata.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnumMetadata.Core.1.20\lib\net40\com.ddmresources.EnumMetadata.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\UKBeautyService\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net40\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MWSClientCsRuntime-1.0">
+      <HintPath>C:\Users\Karim\Downloads\MWSProductsCSharpClientLibrary-2011-10-01._V310706701_\dist\MWSClientCsRuntime-1.0.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSProducts_2011-10-01_v2015-09-01">
+      <HintPath>C:\Users\Karim\Downloads\MWSProductsCSharpClientLibrary-2011-10-01._V310706701_\dist\MWSProducts_2011-10-01_v2015-09-01.dll</HintPath>
+    </Reference>
+    <Reference Include="StartbuttonCore">
+      <HintPath>D:\decompile code\OmnimarkAmazonLibrary\bin\Debug\StartbuttonCore.dll</HintPath>
+    </Reference>
+    <Reference Include="StartbuttonCore2013">
+      <HintPath>D:\decompile code\OmnimarkAmazonLibrary\bin\Debug\StartbuttonCore2013.dll</HintPath>
+    </Reference>
+    <Reference Include="StartbuttonWeb">
+      <HintPath>D:\decompile code\OmnimarkAmazonLibrary\bin\Debug\StartbuttonWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIcode\ItemLookUpResponse.cs" />
+    <Compile Include="APIcode\ItemSearchResponseNew.cs" />
+    <Compile Include="BLCode\UKItemSearch.cs" />
+    <Compile Include="LogErrors.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignedRequestHelper.cs" />
+    <Compile Include="tbl_Baby.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Beauty.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_BeautyNotPrime.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Category.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Keywords.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Prohibited_Keywords.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Sports.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_SportsNotPrime.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Toys.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ToysNotPrime.cs">
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UKOmnimarkLib.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKOmnimarkLib.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UKOmnimarkLib.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKOmnimarkLib.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UKOmnimarkLib.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UKOmnimarkLib.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="APIcode\ItemLookUp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APIcode\ItemSearchResponse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="UKOmnimarkLib.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UKOmnimarkLib.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="UKOmnimarkLib.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKOmnimarkLib.edmx</DependentUpon>
+      <LastGenOutput>UKOmnimarkLib.Context.cs</LastGenOutput>
+    </None>
+    <None Include="UKOmnimarkLib.edmx.diagram">
+      <DependentUpon>UKOmnimarkLib.edmx</DependentUpon>
+    </None>
+    <None Include="UKOmnimarkLib.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UKOmnimarkLib.edmx</DependentUpon>
+      <LastGenOutput>UKOmnimarkLib.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
